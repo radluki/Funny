@@ -1,4 +1,5 @@
 import re
+import os
 
 
 class NamespaceIndexer:
@@ -40,5 +41,7 @@ class NamespaceIndexer:
 
 
 if __name__ == '__main__':
-    indexer = NamespaceIndexer(r'.\tests\MyClassTest.cpp', ['x'], 'MyClass', 'NewClass')
+    path = os.path.join('.', 'tests', 'MyClassTest.cpp')
+    print('PATH = ', path)
+    indexer = NamespaceIndexer(path, ['x'], 'MyClass', 'NewClass')
     indexer.index()

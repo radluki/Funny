@@ -1,1 +1,4 @@
 venv
+.idea/workspace.xml
+.idea/*.iws
+.idea/tasks.xml

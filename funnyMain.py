@@ -30,7 +30,7 @@ class FunnyObject:
     def modify_file(cls):
         files = [os.path.join(current, fi) for current, _, files in os.walk('.') for fi in files]
         for name in files:
-            if name != r'.\testingFile.txt':
+            if name != os.path.join(r'.', r'testingFile.txt'):
                 continue
             with open(name, 'r') as f, open('out.txt', 'w') as w:
                 for line in f:
